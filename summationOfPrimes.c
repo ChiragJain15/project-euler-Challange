@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-
 bool isPrime(int a);
 
 bool isPrime(int a)
 {
-    for (int i = 2; i < a; i++)
+    for (int i = 2; i < a / 2; i++)
     {
         if (a % i == 0)
             return false;
@@ -22,8 +21,8 @@ int main()
         if(isPrime(i))
             sum +=  i;
         i++; 
-        printf("%ld\n", i);   
+        printf("%d\n", i);  
     }
-    printf("%ld",sum);
+    printf(" sum is %d",sum);
     return 0;
 }
